@@ -1,0 +1,36 @@
+{
+  "name": "physical-event-experience",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node src/tests/stadiumData.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaikwadomg/Physical-Event-Experience.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+
+  "bugs": {
+    "url": "https://github.com/gaikwadomg/Physical-Event-Experience/issues"
+  },
+  "homepage": "https://github.com/gaikwadomg/Physical-Event-Experience#readme",
+  "dependencies": {
+    "lucide-react": "^1.8.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.14.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.8"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="description" content="Smart Stadium — Skip queues, avoid crowds, order food, and stay safe at live events. Your AI-powered live event companion." />
+    <meta name="theme-color" content="#06080f" />
+    <meta name="author" content="Smart Stadium Team" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Smart Stadium — Your Live Event Companion" />
+    <meta property="og:description" content="Skip queues, avoid crowds, order food smartly, and stay safe at any live event." />
+    <meta property="og:type" content="website" />
+
+    <!-- Security headers via meta -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; frame-src https://www.google.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;" />
+
+    <title>Smart Stadium — Your Live Event Companion</title>
+
+    <!-- Google Fonts (Google Service #1) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Google Analytics (Google Service #2) — replace GA_MEASUREMENT_ID with real ID for production -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', {
+        // Anonymize IP for privacy/security
+        anonymize_ip: true,
+        // Respect Do Not Track
+        send_page_view: !navigator.doNotTrack
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
