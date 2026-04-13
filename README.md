@@ -2,7 +2,7 @@
 
 > A cloud-based web application that helps stadium visitors avoid crowds, skip queues, order food smartly, stay safe, and have fun — all from their phone.
 
-🔗 **Live Demo:** [smart-stadium-app](https://smart-stadium-app-731791825163.asia-south1.run.app)
+🔗 **Live Demo:** [physical-event-experience](https://physical-event-experience-731791825163.us-central1.run.app)
 
 ---
 
@@ -40,10 +40,28 @@ Smart Stadium is an AI-powered live event companion that optimizes the stadium e
 | **Icons** | Lucide React |
 | **Notifications** | React Hot Toast + Browser Notification API |
 | **Fonts** | Google Fonts (Inter, Outfit) |
-| **Maps** | Google Maps Embed API |
+| **Authentication** | Firebase Google Auth |
+| **3D Rendering** | Three.js (Landing Page) |
 | **Analytics** | Google Analytics (privacy-respecting) |
-| **Deployment** | Google Cloud Run (Asia South1 — Mumbai) |
-| **Container** | Nginx Alpine |
+| **Deployment** | Google Cloud Run (us-central1) |
+| **Container** | Docker + Nginx Alpine |
+
+---
+
+## 📐 Architecture Flow
+
+```mermaid
+graph TD
+    A[User Visits App] --> B{Authenticated?}
+    B -->|Yes| D[HomePage + Full App]
+    B -->|No| C[LandingPage]
+    C --> E[Sign in with Google]
+    C --> F[Continue as Guest]
+    E --> G[Firebase Auth Popup]
+    G -->|Success| D
+    F --> D
+    D --> H[Navbar + All Pages]
+```
 
 ---
 
@@ -152,18 +170,20 @@ npm test
 
 ---
 
-## 🔵 Google Services Integration
+## 🔵 Google Services & Core Integrations
 
-1. **Google Fonts** — Inter (body) + Outfit (headings) for premium typography
-2. **Google Maps Embed API** — Stadium location on Navigation page
-3. **Google Analytics** — Page tracking with anonymized IP and DNT respect
-4. **Google Cloud Run** — Production deployment on managed serverless infrastructure
+1. **Firebase Authentication** — Secure Google Sign-In with "Continue as Guest" fallback
+2. **Three.js 3D Engine** — Premium 3D particle animations on the landing page
+3. **Google Fonts** — Inter (body) + Outfit (headings) for premium typography
+4. **Google Analytics** — Page tracking with anonymized IP and DNT respect
+5. **Google Cloud Run** — Production deployment via Docker & Nginx on managed serverless infrastructure
 
 ---
 
 ## 📱 Screenshots
 
 The app features a premium dark-mode glassmorphism design with:
+- Stunning **Three.js 3D landing page** with parallax hover effects
 - Real-time crowd data visualization
 - Color-coded status indicators (Green → Free, Yellow → Moderate, Red → Crowded)
 - Smooth page transitions and micro-animations
@@ -173,16 +193,14 @@ The app features a premium dark-mode glassmorphism design with:
 
 ## 🌐 Deployment
 
-Deployed to **Google Cloud Run** (Asia South1 — Mumbai):
+Deployed to **Google Cloud Run** (us-central1) using Docker and Nginx:
 
 ```bash
-# Build the project
-npm run build
-
-# Deploy to Cloud Run
-gcloud run deploy smart-stadium-app \
-  --source ./dist \
-  --region asia-south1 \
+# Deploy directly to Cloud Run from the source code
+# (This utilizes the Dockerfile and nginx.conf in the root directory)
+gcloud run deploy physical-event-experience \
+  --source . \
+  --region us-central1 \
   --allow-unauthenticated \
   --project smart-web-stadium
 ```
