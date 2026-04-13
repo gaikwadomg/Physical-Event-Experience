@@ -23,17 +23,13 @@ export default function NavigationPage() {
         <p>Find the fastest route to your destination</p>
       </header>
 
-      {/* Google Maps Embed — Stadium location via Google Maps Embed API */}
-      <div className="map-embed" aria-label="Stadium location map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2!2d73.8567!3d18.5195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1a3f1d7b7e1%3A0x5e4b0e8b6d1c6b1!2sMaharashtra%20Cricket%20Association%20Stadium!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-          width="100%"
-          height="200"
-          style={{ border: 0 }}
-          allowFullScreen
+      {/* Stadium Floor Map — Static venue layout image */}
+      <div className="map-embed" aria-label="Stadium floor plan">
+        <img
+          src="/stadium-map.png"
+          alt="The Entertainment Complex — Floor Level 1 showing cinema halls, theater, esports arena, food court, lounges, and all venue areas"
+          className="map-static-image"
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Stadium location on Google Maps"
         />
       </div>
 

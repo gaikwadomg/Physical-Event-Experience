@@ -17,17 +17,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-
   "bugs": {
     "url": "https://github.com/gaikwadomg/Physical-Event-Experience/issues"
   },
   "homepage": "https://github.com/gaikwadomg/Physical-Event-Experience#readme",
   "dependencies": {
+    "firebase": "^12.12.0",
     "lucide-react": "^1.8.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-hot-toast": "^2.6.0",
-    "react-router-dom": "^7.14.0"
+    "react-router-dom": "^7.14.0",
+    "three": "^0.183.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.1",
