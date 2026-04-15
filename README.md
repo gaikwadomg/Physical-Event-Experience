@@ -26,6 +26,8 @@ Smart Stadium is an AI-powered live event companion that optimizes the stadium e
 | ⏳ **Queue Management** | Track all active queues with progress bars, estimated times, and multi-channel notifications (Browser + Toast + Audio) |
 | 🚨 **Emergency Mode** | SOS activation with safest-exit routing, emergency contacts, and one-tap calling |
 | 🎮 **Gamification** | Spin-the-wheel (3 daily spins) and stadium trivia quiz with point tracking and rank system |
+| 🤖 **AI Chatbot** | Powered by Google Gemini API providing functional, context-aware quick assistance to users |
+| 🌍 **Multi-Language Support** | Google Translate API integration for seamless real-time language translation |
 
 ---
 
@@ -176,7 +178,9 @@ npm test
 2. **Three.js 3D Engine** — Premium 3D particle animations on the landing page
 3. **Google Fonts** — Inter (body) + Outfit (headings) for premium typography
 4. **Google Analytics** — Page tracking with anonymized IP and DNT respect
-5. **Google Cloud Run** — Production deployment via Docker & Nginx on managed serverless infrastructure
+5. **Google Gemini API** — Context-aware AI chatbot assistant
+6. **Google Translate API** — Real-time multi-language translation
+7. **Google Cloud Run** — Production deployment via Docker & Nginx on managed serverless infrastructure
 
 ---
 
